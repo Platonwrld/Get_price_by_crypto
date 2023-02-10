@@ -30,10 +30,11 @@ async def main():
         
         if price > max_price:
             max_price = price
+        
         if price < max_price * 0.99:
-            print(f'Цена упала на 1% по отношению к максимальной цене за последний час: {price}')
+            print(f'Цена упала на 1% от максимальной цены за последний час: {price}')
             
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
 
 
 if __name__ == "__main__":
